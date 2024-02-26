@@ -20,13 +20,16 @@
     </fieldset>
     <button onclick="showMessage()">Enviar</button>
     <div id="message"></div>
-    <script src="script.js"></script>
-    <div id="studyQuestion">
-      <label for="study" class="show"
-        >Você gosta de estudar <span id="language"></span>? Responda com o
+    <!-- <script src="script.js"></script> -->
+    <div id="studyQuestion" style="display: none">
+      <label for="study" class="show">
+        Você gosta de estudar <span id="studyQuestion"></span>? Responda com o
         número 1 para SIM ou 2 para NÃO.
       </label>
-      <input type="number" id="answer" />
+      <input type="number" id="answerStudyQuestion" min="1" max="2" />
+      <button onclick="sendAnswer()">Enviar</button>
+      <div id="finalMessage"></div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
