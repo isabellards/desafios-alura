@@ -15,25 +15,31 @@ function showMessage() {
     ' e já está aprendendo ' +
     language +
     '!';
-  console.log(messageOne);
 
   setInvisible('studyQuestion');
 
   document.getElementById('studyQuestion').style.display = 'block';
+  document.getElementById('messageOne').innerText = messageOne;
 }
 
 function sendAnswer() {
-  const answerStudyQuestion = document.getElementById('answerStudyQuestion');
+  const answerStudyQuestion = Number(
+    document.getElementById('answerStudyQuestion').value
+  );
+  const successMessage =
+    'Muito bom! Continue estudando e você terá muito sucesso.';
+  const failureMessage =
+    'Ahh que pena... Já tentou aprender outras linguagens?';
 
-  if (answerStudyQuestion == 1) {
-    const successMessage =
-      'Muito bom! Continue estudando e você terá muito sucesso.';
-    console.log(successMessage);
-    document.getElementById('finalMessage').value = successMessage;
+  if (answerStudyQuestion === 1) {
+    // const successMessage =
+    //   'Muito bom! Continue estudando e você terá muito sucesso.';
+    // console.log(successMessage);
+    document.getElementById('finalMessage').innerText = successMessage;
   } else {
-    const failureMessage =
-      'Ahh que pena... Já tentou aprender outras linguagens?';
+    // const failureMessage =
+    //   'Ahh que pena... Já tentou aprender outras linguagens?';
     console.log(failureMessage);
-    document.getElementById('finalMessage').value = failureMessage;
+    document.getElementById('finalMessage').innerText = failureMessage;
   }
 }
