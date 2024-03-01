@@ -7,8 +7,29 @@
   </head>
 </html>
 <body>
-  <div id="initialQuestion">
-    <button onClick="initialQuestion()">Front-End</button>
-    <button>Back-End</button>
+  <div>
+    <label id="initialQuestion"
+      >Você deseja seguir para área de Front-End ou Back-End?</label
+    >
+    <button onClick="initialFront()">Front-End</button>
+    <button onClick="initialBack()">Back-End</button>
+  </div>
+  <div>
+    <label id="frontTwo">E você quer aprender React ou Vue?</label>
+    <button>React</button>
+    <button>Vue</button>
+  </div>
+  <div>
+    <label id="backTwo">E você quer aprender C# ou Java?</label>
+    <button>C#</button>
+    <button>Java</button>
+  </div>
+  <div>
+    <label id="secondQuestion"
+      >Deseja se aperfeiçoar na sua área ou tornar-se um desenvolvedor(a)
+      Fullstack?</label
+    >
+    <button>Aperfeiçoar</button>
+    <button>Tornar-se fullstack</button>
   </div>
 </body>
