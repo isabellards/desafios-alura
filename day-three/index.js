@@ -28,4 +28,10 @@ if (especialidadeFullstack == '1') {
 let msg = prompt(
   "Tem mais alguma tecnologia que você gostaria de aprender? Digite 'ok' em caso positivo."
 );
-while (msg == 'ok') {}
+while (msg === 'ok') {
+  let novaTecnologia = prompt('Qual?');
+  alert(`${novaTecnologia} é realmente uma tecnologia muito legal!`);
+  msg = prompt(
+    "Tem mais alguma tecnologia que você gostaria de aprender? Digite 'ok' em caso positivo."
+  );
+}
